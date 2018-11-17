@@ -23,7 +23,15 @@ class Character{
 		}
 	}
 	generateStat( statName, valueDice){
+		debugger;
+		var total = 0;
+		for (var i = 0; i < valueDice.count; i++){
+			var roll =Math.floor(Math.random() * 6) + 1;
+			total += roll;
 
+		}
+		this.stats.[statName] = total;
+		return total;
 	}
 	equipWeapon( weapon ){
 
