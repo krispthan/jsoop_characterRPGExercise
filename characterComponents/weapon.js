@@ -24,13 +24,13 @@ class Weapon{
 	generateAttackMessage(){
 		switch(this.type){
 			case bludgeoning:
-			console.log(this.bearer + "swings" + this.name);
+			attackMessage=(this.bearer + "swings" + this.name);
 			break;
 			case slashing:
-			console.log(this.bearer +"slashes" +this.name);
+			attackMessage=(this.bearer +"slashes" +this.name);
 			break;
 			case piercing:
-			console.log(this.bearer+ "stabs" + this.name);
+			attackMessage=(this.bearer+ "stabs" + this.name);
 		}
 		//bludgeoning weapons swings
 		//slashing weapons slashes

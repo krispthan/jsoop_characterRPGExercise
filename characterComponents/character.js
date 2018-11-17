@@ -34,12 +34,19 @@ class Character{
 		return total;
 	}
 	equipWeapon( weapon ){
-
+		this.weapon=weapon;
+		this.itemWeight=this.weapon[itemWeight];
+	
 	}
 	wearItem( wearable ){
+		this.wearable = wearable;
+		this.wearable = this.wearable[wearable];
+
 
 	}
 	attack( target ){
-		
+		this.target = target;
+		var damage = this.weapon.use();
+		var message = this.weapon.
 	}
 }
