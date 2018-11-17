@@ -4,18 +4,14 @@ class Weapon{
 	constructor(name, type, attackSound, damageStats, weight){
 		this.name= name;
 		this.type= type;
-		this.attackSound = attackSound,
-		this.damageStats = weight;
+		this.attackSound = attackSound;
+		this.damageStats =this.getData(damageStats);
+		this.weight = weight;
 	}
 	wield( bearer ){
 		this.bearer= bearer;
-	
 	}
 	use(){
-	
-		var roll = Math.floor(Math.random() *this.damageStats.dice) +1;
-		total+= roll;
-		return roll;
 
 	}
 	remove(){
@@ -36,7 +32,14 @@ class Weapon{
 		//slashing weapons slashes
 		//piercing weapons stabs
 	}
-	getData(){
+	getData(obj){
+		var count = obj.count;
+		var total = 0;
+		var dice = obj.dice;
+		for(var i=0; i< count.length; i++);
+		var roll = Math.floor(Math.random() * 3) +1;
+		total += roll;
+		return total;
 
 	}
 }
